@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERRA'S WEBSİTE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="styleshhet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <!--nav-bar-->
+  <section id="nav_bar" class="container">
+    <header class="nav-bar">
+      <div class="brand"><a href="#main"><h1>WEB SERRA</h1></a></div>
+      <div class="nav-list">
+        <div class="hamburger">
+          <div class="bar"></div>
+        </div>
+        <ul>
+          <li><a href ="#main">MY PROJECTS</a></li>
+          <li><a href ="#Hakkında">ABOUT ME</a></li>
+          <li><a href ="#Anket">SURVEY SECTION</a></li>
+          <li><a href ="#footer">CONTACT ME</a></li>
+        </ul>
+      </div>    
+    </header>
+  </section>
+  <!--End nav-bar-->
+  <!--Serra Section--> 
+  <section id="main" class="Serra container">
+     <div class="Serra-info">
+        <h1 class="Serra-info-heading"> Welcome To My <br>Website</h1>
+        <p class="Serra-info-subheading">SERRA ÇABAZ</p>
+        <a href="https://github.com/serracabaz34" type="button" class="Serra-info-button">MY PROJECTS</a>
+     </div>
+     <div class="info-img">
+          <img src="./mrb" 
+          width="500px"
+          alt="">
+        </div>
+        </section>
+  <!--End Serra Section-->
+  <!--Hakkında Section --> 
+  <section id="Hakkında" class="Hakkında container">
+    <div class="Hakkında-info">
+      <h1 class="Hakkında-info-heading">ABOUT ME</h1>
+      <p class="Hakkında-info-desc">Hi! I am Serra. I am a student at Düzce University. My department is Computer Engineering. This year, I am a fresman.<p>
+    </div>
+  </section>
+  <!--End Hakkında Section --> 
+  <!--Anket Section-->
+  <section id="Anket" class="Anket Container">
+     <div class="Anket-header">
+      <h1 class="Anket-header-heading">SURVEY SECTION</h1>
+      <p class="Anket-header-desc">In this section, I made a survey for you and please answer my survey.</p>
+    </div>
+    <div class="container">
+      <form action="./html/" method="post">
+        <!--Form elemanlarınız burada-->
+          <!-- Soru 1: Tek doğru cevap -->
+          <div class="question1">
+              <label>I designed a website for the first time. Did you like it and how did you find it?</label><br>
+              <input type="radio" name="question1" value="I liked it.">I liked it. <br>
+              <input type="radio" name="question1" value="It is pretty good for a first try.">It is pretty good for a first try. <br>
+              <input type="radio" name="question1" value="It's good but can be improved.">It's good but can be improved. <br>
+          </div>
+
+          <!-- Soru 2: Tek doğru cevap -->
+          <div class="question2">
+              <label>Have you started following me to improve yourself?</label><br>
+              <input type="radio" name="question2" value="Yes,sure.">Yes,sure.<br>
+              <input type="radio" name="question2" value="I already follow you.">I already follow you.<br>
+          </div>
+
+          <!-- Soru 3: İki doğru cevap içeren soru -->
+          <div class="question3">
+              <label>Have you ever made a website before? If so, what programming languages ​​did you use? (The answer to this question may have multiple options.)</label><br>
+              <input type="checkbox" name="question3" value="No."> Python<br>
+              <input type="checkbox" name="question3" value="HTML"> HTML<br>
+              <input type="checkbox" name="question3" value="JavaScript"> JavaScript<br>
+              <input type="checkbox" name="question3" value="CSS"> CSS<br>
+          </div>
+          <button type="submit">SUBMIT</button>
+           
+      </form>
+  </div>
+  </section>
+  <!--End Anket Section-->
+  <!--Footer Section-->
+  <footer id="footer" class="footer container">
+    <div class="footer-contact">
+      <h1 class="footer-contact-heading">CONTACT ME</h1>
+      <p class="footer-contact-info">Email : serracabaz7@gmail.com</p>
+    </div>
+  <div class="footer-social-follow">
+      <h1 class="footer-social-follow-heading">FOLLOW ME</h1>
+      <div class="footer-social-icon">
+          <a href="https://www.linkedin.com/in/serra-cabaz"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="905457383110"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/_serra_cabaz_"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+  
+  <!--End Footer Section-->
+  <script src="./app.js"></script>
+  
+</body>
+</html>

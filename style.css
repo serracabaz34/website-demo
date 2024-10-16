@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;  
+}
+html{
+    font-size: 10px;
+    font-family:'Montserrat',sans-serif;
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Nav Bar*/
+#nav-bar{
+    height:auto;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+.nav-bar {
+    background-color: rgb(232, 213, 44);
+    left: 0;
+    top: 0;
+    padding:1rem 5 rem;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-bar .brand a{
+    font-size: 3rem;
+    color:rgb(3, 3, 3);
+}
+.nav-bar .nav-list{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.nav-bar .nav-list .hamburger{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 70px;
+    transition: .3s ease transform;
+    cursor: pointer;
+}
+.nav-bar .nav-list .hamburger .bar{
+    height: 2px;
+    width: 30px;
+    background-color: black;
+    position: relative;
+    display: flex;
+
+}
+.nav-bar .nav-list .hamburger .bar::before,
+.nav-bar .nav-list .hamburger .bar::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    height:100%;
+    width:100%;
+    background-color: black;
+    transition: .3s ease all;
+}
+.nav-bar .nav-list .hamburger .bar::before{
+    top: 8px;
+}
+.nav-bar .nav-list .hamburger .bar::after{
+    bottom: 8px;
+}
+.nav-bar .nav-list ul{
+    position:absolute;
+    width:100%;
+    top:100px;
+    left:0;
+    background-color: plum;
+    padding:5rem 0;
+    transform: translateY(-100%);
+    transition: .3 ease transform;
+    text-align: center;
+    z-index: -1;
+}
+.nav-bar .nav-list ul li{
+    list-style: none;
+    display: block;
+    position:relative;
+}
+.nav-bar .nav-list ul li a{
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:white;
+    display:block;
+    letter-spacing: .15rem;
+    padding:2rem 3rem;
+
+}
+.nav-bar .nav-list ul li:after{
+    content:'';
+    position:absolute;
+    width:5rem;
+    height: .2rem;
+    background-color: white;
+    left:50%;
+    transform: translateX(-50%) scale(0);
+    bottom:0;
+    transition: .3s ease transform;
+}
+.nav-bar .nav-list ul li:hover:after{
+    transform: translateX(-50%) scale(1);
+}
+.nav-bar .nav-list.open ul{
+    transform: translateY(100px);
+}
+.nav-bar .nav-list .hamburger.active{
+    transform: rotate(360deg);
+}
+.nav-bar .nav-list .hamburger.active .bar:before{
+    top:0;
+    transform:rotate(45deg);
+}
+.nav-bar .nav-list .hamburger.active .bar :after{
+    top:0
+}
+.nav-bar .nav-list .hamburger.active .bar{
+    background-color: transparent;
+}
+
+/*End Nav Bar*/
+/*Serra Section*/
+.Serra{
+    min-height: 80vh;
+    width: 100%;
+    padding-top: 50px;
+    background-color:darkslategray;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.Serra .Serra-info{
+    width: 100%;
+    text-align: center;
+}
+.Serra .Serra-info .Serra-info-heading{
+    font-size: 5rem;
+    font-weight: 500;
+    color:lightpink;
+}
+.Serra .Serra-info .Serra-info-subheading{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing:5rem;
+    color:rgb(220, 224, 13);
+} 
+.Serra .Serra-info .Serra-info-button{
+    margin-top : 30px;
+    padding: 2rem 5rem;
+    display: inline-block;
+    color: rgb(8, 81, 126);
+    text-decoration: underline;
+    letter-spacing: .5rem;
+    background-color:chocolate
+}
+.Serra .Serra-info-button:hover{
+    background-color:rgb(0, 0, 0);
+}
+.Serra .Serra-img{
+    height: auto;
+    width: 80%;
+    margin-bottom: 3rem;
+}
+.Serra .Serra-img img{
+    height: 100%;
+    width: 100%;
+}
+/*End Serra Section*/
+/*Hakkında Section*/
+.Hakkında{
+    width:100%;
+    min-width: 50vh;
+    padding:10rem 5rem;
+    flex-direction: column;
+    background-color:rgb(197, 192, 186)
+}
+.Hakkında .Hakkında-info{
+    text-align: center;
+}
+.Hakkında .Hakkında-info .Hakkında-info-heading{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing:3rem;
+    color:rgb(195, 23, 106);
+}
+.Hakkında .Hakkında-info .Hakkında-info-desc{
+    font-size: 2.5rem;
+    line-height: 5rem;
+    margin-top: 10px;
+    color:rgb(81, 4, 105)
+}
+.Hakkında .Hakkında-info .Hakkında-info-button{
+    padding: 1.6rem;
+    display:inline-block;
+    background-color:dodgerblue;
+    color:rgb(255, 255, 255);
+    text-decoration:wavy;
+    font-size: 1.6rem;
+    text-transform:uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 20px;
+}
+/*End Hakkında Section*/
+/*Anket Section*/
+.Anket{
+    flex-direction:column;
+    min-height:60vh;
+    padding: 10rem 5rem;
+    background-color:rgb(23, 193, 209)
+}
+.Anket .Anket-header{
+    width: 100%;
+    text-align: center;
+}
+.Anket .Anket-header .Anket-header-heading{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:rgb(211, 95, 18);
+}
+.Anket .Anket-header .Anket-header-desc{
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-top: 30px;
+    color: rgba(0, 0, 0, 0.792);
+}
+/* Genel gövde ayarları */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #90c9f1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Anket Container */
+.Anket.Container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlık stil ayarları */
+.Anket-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Anket-header-heading {
+    font-size: 28px;
+    color: #333;
+}
+
+.Anket-header-desc {
+    font-size: 30px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Form kutusu stil ayarları */
+.container {
+    width: 100%;
+}
+
+/* Sorular için genel stil */
+.question1, .question2, .question3 {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Radyo butonları ve checkbox stil ayarları */
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+    font-size:xx-large;
+}
+
+/* Buton stil ayarları */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Buton hover efekti */
+button:hover {
+    background-color: #218838;
+}
+
+/* Küçük ekranlar için responsive tasarım */
+@media (max-width: 768px) {
+    .Anket.Container {
+        width: 90%;
+    }
+
+    .Anket-header-heading {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+/*End Anket Section*/
+ /*Footer Section*/ 
+ .footer{
+    min-height: 20vh;
+    width: 100%;
+    background-color:rgb(158, 11, 11);
+    color:rgb(3, 2, 2);
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem;
+ }
+ .footer .footer-contact{
+    padding:20px;
+ }
+ .footer .footer-contact .footer-contact-heading{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom:10px;
+ }
+ .footer .footer-contact .footer-contact-info{
+    font-size: 1.4rem;
+    padding-top: 10px;
+    letter-spacing: .2rem;
+ }
+ .footer .footer-social-follow .footer-social-icon a{
+    color:rgb(0, 0, 0);
+    font-size: 3rem;
+    margin: .4rem;
+    display: inline-block;
+ }
+ 
+ /*End Footer Section*/
+ /*Media query for desktop and tab*/
+ @media only screen and (min-width:768px) {
+.nav-bar .nav-list .hamburger{
+    display: none;
+}
+.nav-bar .nav-list ul{
+    transform: translateX(0);
+    position:initial;
+    padding: 0;
+    z-index:initial;
+    background-color: rgb(0, 0, 0);
+}
+.nav-bar .nav-list ul li{
+    display: inline-block;
+}
+   .Serra{
+        height: 100vh;
+        flex-direction:row;
+        padding-left: 10%;
+        justify-content: center;
+        text-align: center;
+    }
+ }
+ /* Media Ouery For Desktop Only*/
+
+ /* Media Ouery For Desktop Only*/
+ /*End Media query for desktop and tab*/
+
+ 
